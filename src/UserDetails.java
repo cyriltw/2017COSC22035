@@ -14,7 +14,7 @@ public class UserDetails extends JFrame {
     private JTextField txtGPA;
     private JTextField txtAcdYr;
     private JButton exitButton;
-    private JButton coursesButton;
+    private JButton insertDataButton;
     private Statement stml=null;
 
     public UserDetails(String userName) {
@@ -30,6 +30,14 @@ public class UserDetails extends JFrame {
             }
         });
 
+        insertDataButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new StoreDetails().setVisible(true);
+                setVisible(false);
+
+            }
+        });
     }
     private void fillDetails(String userName)
     {
